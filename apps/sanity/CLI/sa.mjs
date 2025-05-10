@@ -8,7 +8,6 @@ import {
   createSanityReadToken,
   fillSanityDataset,
   getSanityUserInfo,
-  //   inviteUserToSanityProject,
 } from "./services/sanity.mjs";
 import {
   createProjectDeployment,
@@ -86,11 +85,11 @@ const main = async () => {
 
     if (!process.env.DEBUG) {
       spinner.start("Removing unrelated files ⏳");
-      execSync("rm -rf ../../storyblok", {
+      execSync("rmdir /s /q ..\\..\\storyblok", {
         stdio: "ignore",
       });
 
-      execSync("rm -rf ../src/generated/initial-data.tar.gz", {
+      execSync("del /f /q ..\\src\\generated\\initial-data.tar.gz", {
         stdio: "ignore",
       });
 

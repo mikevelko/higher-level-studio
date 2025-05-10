@@ -1,1 +1,0 @@
-# storyblok-next.js-boilerplate

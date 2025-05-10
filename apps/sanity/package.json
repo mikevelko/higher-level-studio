@@ -8,8 +8,7 @@
     "lint": "next lint",
     "start": "next start",
     "extract-schema": "pnpm sanity schema extract --path src/generated/extracted-schema.json --enforce-required-fields",
-    "gen:types": "pnpm extract-schema && pnpm sanity typegen generate",
-    "update-dataset": "sanity dataset export production src/generated/initial-data.tar.gz"
+    "gen:types": "pnpm extract-schema && pnpm sanity typegen generate"
   },
   "dependencies": {
     "@focus-reactive/sanity-template-selector": "workspace:*",
