@@ -1,0 +1,72 @@
+{
+  "marginBottom": "base",
+  "isReversedOnMobile": false,
+  "marginTop": "base",
+  "maxWidth": "base",
+  "theme": "light",
+  "paddingX": "base",
+  "paddingY": "base",
+  "columns": [
+    {
+      "removeInnerMargins": false,
+      "_type": "customRichText",
+      "alignVariant": "left",
+      "text": [
+        {
+          "children": [
+            {
+              "_type": "span",
+              "marks": [],
+              "text": "title"
+            }
+          ],
+          "_type": "block",
+          "style": "h2",
+          "markDefs": []
+        },
+        {
+          "_type": "block",
+          "style": "normal",
+          "markDefs": [],
+          "children": [
+            {
+              "_type": "span",
+              "marks": ["strong", "em"],
+              "text": "Lorem ipsum"
+            },
+            {
+              "_type": "span",
+              "marks": ["strong"],
+              "text": " is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups."
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "style": "normal",
+          "markDefs": [],
+          "children": [
+            {
+              "_type": "span",
+              "marks": [],
+              "text": ""
+            }
+          ]
+        },
+        {
+          "children": [
+            {
+              "_type": "span",
+              "marks": ["underline"],
+              "text": "Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups."
+            }
+          ],
+          "_type": "block",
+          "style": "normal",
+          "markDefs": []
+        }
+      ]
+    }
+  ],
+  "_type": "section.copy"
+}

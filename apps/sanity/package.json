@@ -1,0 +1,47 @@
+{
+  "name": "sanity",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev --port=3000",
+    "build": "next build",
+    "lint": "next lint",
+    "start": "next start",
+    "extract-schema": "pnpm sanity schema extract --path src/generated/extracted-schema.json --enforce-required-fields",
+    "gen:types": "pnpm extract-schema && pnpm sanity typegen generate",
+    "update-dataset": "sanity dataset export production src/generated/initial-data.tar.gz"
+  },
+  "dependencies": {
+    "@focus-reactive/sanity-template-selector": "workspace:*",
+    "@portabletext/react": "3.1.0",
+    "@sanity/client": "6.27.2",
+    "@sanity/image-url": "1.1.0",
+    "@sanity/preview-url-secret": "2.0.5",
+    "@sanity/vision": "3.72.1",
+    "@shared/ui": "workspace:*",
+    "@tailwindcss/typography": "0.5.10",
+    "@tinloof/sanity-studio": "1.7.1",
+    "next": "15.1.6",
+    "next-sanity": "9.8.46",
+    "react": "19",
+    "react-dom": "19",
+    "sanity": "3.72.1",
+    "sanity-plugin-simpler-color-input": "3",
+    "server-only": "0.0.1",
+    "sonner": "^1.7.1",
+    "uuid": "10.0.0"
+  },
+  "devDependencies": {
+    "@shared/eslint-config": "workspace:*",
+    "@shared/tailwind-config": "workspace:*",
+    "@shared/ts-config": "workspace:*",
+    "@types/react": "18",
+    "autoprefixer": "10.0.1",
+    "eslint": "8",
+    "eslint-config-next": "14.1.0",
+    "postcss": "8",
+    "prettier": "3.2.5",
+    "tailwindcss": "3.4.3",
+    "typescript": "5.4.5"
+  }
+}

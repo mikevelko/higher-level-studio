@@ -1,0 +1,30 @@
+{
+  "_type": "section.linksList",
+  "alignVariant": "left",
+  "maxWidth": "base",
+  "marginTop": "base",
+  "marginBottom": "base",
+  "theme": "light",
+  "paddingX": "base",
+  "paddingY": "base",
+  "links": [
+    {
+      "target": "_blank",
+      "size": "base",
+      "_type": "customLink",
+      "variant": "primary",
+      "href": "https://github.com/focusreactive/cms-kit",
+      "text": "Get for free",
+      "type": "url"
+    },
+    {
+      "type": "url",
+      "target": "_blank",
+      "size": "base",
+      "_type": "customLink",
+      "variant": "secondary",
+      "href": "https://focusreactive.com/#mail-us",
+      "text": "Request a demo"
+    }
+  ]
+}

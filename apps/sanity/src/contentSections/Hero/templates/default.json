@@ -1,0 +1,75 @@
+{
+  "_type": "section.hero",
+  "maxWidth": "base",
+  "marginTop": "base",
+  "marginBottom": "base",
+  "links": [
+    {
+      "target": "_blank",
+      "size": "base",
+      "_type": "customLink",
+      "variant": "primary",
+      "href": "https://github.com/focusreactive/cms-kit",
+      "text": "Get for free",
+      "type": "url"
+    },
+    {
+      "type": "url",
+      "target": "_blank",
+      "size": "base",
+      "_type": "customLink",
+      "variant": "secondary",
+      "href": "https://focusreactive.com/#mail-us",
+      "text": "Request a demo"
+    }
+  ],
+  "text": {
+    "removeInnerMargins": true,
+    "_type": "customRichText",
+    "alignVariant": "left",
+    "text": [
+      {
+        "markDefs": [],
+        "children": [
+          {
+            "_type": "span",
+            "marks": [],
+            "text": "In Notion, work feels better."
+          }
+        ],
+        "_type": "block",
+        "style": "h2"
+      },
+      {
+        "markDefs": [],
+        "children": [
+          {
+            "text": "With a little help from AI.",
+            "_type": "span",
+            "marks": []
+          }
+        ],
+        "_type": "block",
+        "style": "h2"
+      }
+    ]
+  },
+  "image": {
+    "aspectRatio": "16/9",
+    "height": 398,
+    "image": {
+      "alt": "hero image",
+      "asset": {
+        "_ref": "image-87bbe62c05af83adf65157b910fb734a6eca8cea-1920x1023-png",
+        "_type": "reference"
+      },
+      "_type": "image"
+    },
+    "_type": "customImage"
+  },
+  "title": "cms-kit",
+  "globalData": null,
+  "theme": "light",
+  "paddingX": "base",
+  "paddingY": "base"
+}

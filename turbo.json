@@ -1,0 +1,45 @@
+{
+  "$schema": "https://turborepo.org/schema.json",
+  "globalDependencies": ["**/.env.*local"],
+  "globalEnv": [
+    "NEXT_PUBLIC_*",
+    "SB_*",
+    "SANITY_*",
+    "NODE_ENV",
+    "VERCEL_ENV",
+    "VERCEL_REDEPLOY_HOOK_URL"
+  ],
+  "tasks": {
+    "build": {
+      "cache": true,
+      "persistent": true,
+      "dependsOn": ["^build"],
+      "outputs": [".next/**", "!.next/cache/**", "dist/**"],
+      "env": ["VERCEL_REDEPLOY_HOOK_URL"]
+    },
+    "start": {
+      "dependsOn": ["^build"]
+    },
+    "lint": {
+      "cache": true,
+      "persistent": true
+    },
+    "typecheck": {},
+    "dev": {
+      "cache": false,
+      "persistent": true
+    },
+    "dev:turbo": {
+      "cache": false,
+      "persistent": true
+    },
+    "@focus-reactive/sanity-template-selector#build": {
+      "persistent": false,
+      "outputs": [".next/**", "!.next/cache/**", "dist/**"]
+    },
+    "sanity#build": {
+      "dependsOn": ["^build"],
+      "outputs": ["dist/**"]
+    }
+  }
+}
