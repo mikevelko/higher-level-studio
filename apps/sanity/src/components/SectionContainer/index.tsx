@@ -56,7 +56,7 @@ export default function SectionContainer({
       style={style}
     >
       <div
-        className={cn("mx-auto px-4 py-8", {
+        className={cn("mx-auto py-8", {
           "px-0": cleanPaddingX === "none",
           "py-0": cleanPaddingY === "none",
           "px-sectionBase": cleanPaddingX === "base",

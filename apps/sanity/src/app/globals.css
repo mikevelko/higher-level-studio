@@ -11,10 +11,11 @@
 }
 
 .light {
-  --bg: #fff;
-  --text: #222222;
+  --bg: #35183f;
+  --bg-transparent: #35183fda;
+  --text: #e5e7e7;
   --text-secondary: #666666;
-  --primary: #4f46e5;
+  --primary: #0a6f4f;
 }
 
 .dark {

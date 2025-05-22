@@ -3,57 +3,6 @@
   "maxWidth": "base",
   "marginTop": "base",
   "marginBottom": "base",
-  "links": [
-    {
-      "target": "_blank",
-      "size": "base",
-      "_type": "customLink",
-      "variant": "primary",
-      "href": "https://github.com/focusreactive/cms-kit",
-      "text": "Get for free",
-      "type": "url"
-    },
-    {
-      "type": "url",
-      "target": "_blank",
-      "size": "base",
-      "_type": "customLink",
-      "variant": "secondary",
-      "href": "https://focusreactive.com/#mail-us",
-      "text": "Request a demo"
-    }
-  ],
-  "text": {
-    "removeInnerMargins": true,
-    "_type": "customRichText",
-    "alignVariant": "left",
-    "text": [
-      {
-        "markDefs": [],
-        "children": [
-          {
-            "_type": "span",
-            "marks": [],
-            "text": "In Notion, work feels better."
-          }
-        ],
-        "_type": "block",
-        "style": "h2"
-      },
-      {
-        "markDefs": [],
-        "children": [
-          {
-            "text": "With a little help from AI.",
-            "_type": "span",
-            "marks": []
-          }
-        ],
-        "_type": "block",
-        "style": "h2"
-      }
-    ]
-  },
   "image": {
     "aspectRatio": "16/9",
     "height": 398,
@@ -67,7 +16,6 @@
     },
     "_type": "customImage"
   },
-  "title": "cms-kit",
   "globalData": null,
   "theme": "light",
   "paddingX": "base",
