@@ -14,9 +14,11 @@ export default function Page({ data }: IPageProps) {
   return (
     <div className={cn("bg-bgColor", theme)}>
       <Header data={header} />
-      {sectionsBody?.map((section, i) => (
-        <SectionRenderer key={section._key + i} section={section} />
-      ))}
+      <div className="-mt-16 md:-mt-28">
+        {sectionsBody?.map((section, i) => (
+          <SectionRenderer key={section._key + i} section={section} />
+        ))}
+      </div>
       {showCookieBanner && <CookieBanner />}
       <Footer data={footer} />
     </div>

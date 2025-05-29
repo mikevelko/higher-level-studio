@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import NextLink from "next/link";
 import { Cross1Icon, HamburgerMenuIcon } from "@radix-ui/react-icons";
 
@@ -13,17 +13,39 @@ import type { IMobileHeaderProps } from "./types";
 export function HeaderMobile({ links, image, className }: IMobileHeaderProps) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const checkScrollPosition = () => {
+      setIsScrolled(window.scrollY > 50); // Adjust the value as needed
+    };
+
+    // Check scroll position on initial render
+    checkScrollPosition();
+
+    window.addEventListener("scroll", checkScrollPosition);
+    return () => {
+      window.removeEventListener("scroll", checkScrollPosition);
+    };
+  }, []);
+
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
   return (
-    <header className={cn("bg-bgColorTransparent flex", className)}>
+    <header
+      className={cn(
+        "flex",
+        isScrolled ? "bg-bgColorTransparent" : "",
+        className,
+      )}
+    >
       <nav
-        className={cn("flex grow items-center justify-between p-4")}
-        aria-label="main mavigation"
+        className={cn("flex grow items-center justify-between ")}
+        aria-label="main mavigation mobile"
       >
-        <div className="h-20 w-auto">
+        <div className="h-16">
           {image && (
             <NextLink href="/">
               <Image {...image} fit="contain" />

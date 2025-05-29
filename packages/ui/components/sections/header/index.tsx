@@ -36,7 +36,7 @@ export function Header({
       className={cn(
         "flex gap-2",
         className,
-        isScrolled ? "bg-bgColorTransparent" : "bg-bgColor",
+        isScrolled ? "bg-bgColorTransparent" : "",
       )}
     >
       <nav

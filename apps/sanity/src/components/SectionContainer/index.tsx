@@ -63,7 +63,7 @@ export default function SectionContainer({
           "py-sectionBase": cleanPaddingY === "base",
           "px-sectionLarge": cleanPaddingX === "large",
           "py-sectionLarge": cleanPaddingY === "large",
-          "max-w-screen-xl": cleanMaxWidth === "base",
+          "max-w-screen-xl": cleanMaxWidth === "none",
           "max-w-screen-sm": cleanMaxWidth === "small",
         })}
       >
