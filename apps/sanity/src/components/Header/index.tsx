@@ -2,7 +2,7 @@ import { stegaClean } from "@sanity/client/stega";
 import EmptyBlock from "@shared/ui/components/EmptyBlock";
 import type { AlignVariant } from "@shared/ui/components/sections/header/types";
 
-import { Header as HeaderUI } from "@shared/ui";
+import { HeaderMobile as HeaderMobileUI, Header as HeaderUI } from "@shared/ui";
 
 import { prepareImageProps } from "@/lib/adapters/prepareImageProps";
 import { prepareLinkProps } from "@/lib/adapters/prepareLinkProps";
@@ -27,6 +27,12 @@ export default function Header({ data }: IHeaderProps) {
         links={links?.map(prepareLinkProps) || []}
         image={prepareImageProps(image)}
         alignVariant={stegaClean(alignVariant) as AlignVariant}
+        className="hidden md:block"
+      />
+      <HeaderMobileUI
+        links={links?.map(prepareLinkProps) || []}
+        image={prepareImageProps(image)}
+        className="block md:hidden"
       />
     </SectionContainer>
   );
