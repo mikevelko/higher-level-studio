@@ -19,12 +19,12 @@ export function Footer({
   console.log(contactPhoneNumber1);
   return (
     <footer className="space-y-12">
-      <div className="flex justify-center gap-32">
+      <div className="flex flex-col justify-center gap-12 md:flex-row md:gap-32">
         <div className="h-40">
           <Image {...image} fit="contain" />
         </div>
 
-        <div className="flex flex-col items-start gap-4">
+        <div className="flex flex-col items-center gap-4 md:items-start">
           <h2 className="text-primaryColor text-center text-xl font-semibold">
             KONTAKT
           </h2>
@@ -52,13 +52,13 @@ export function Footer({
           </div>
         </div>
 
-        <div className="flex flex-col items-start gap-4">
+        <div className="flex flex-col items-center gap-4 md:items-start">
           <h2 className="text-primaryColor text-center text-xl font-semibold">
             USŁUGI
           </h2>
           <nav
             aria-label="services navigation"
-            className="flex flex-col items-start gap-4"
+            className="flex flex-col items-center gap-4 md:items-start"
           >
             {servicesLinks.map((link, i) => (
               <Link key={link.text + i} {...link} className="p-0" />
