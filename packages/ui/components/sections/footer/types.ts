@@ -1,10 +1,15 @@
 import type { IImageProps } from "../../ui/image/types";
 import type { LinkProps } from "../../ui/link/types";
-import type { IRichTextProps } from "../../ui/richText/types";
 
 export interface IFooterProps {
-  links: LinkProps[];
   image: IImageProps;
-  text: IRichTextProps;
+  servicesLinks: LinkProps[];
+  address?: string;
+  contactPhoneNumber1?: string;
+  contactPhoneNumber2?: string;
+  contactEmail?: string;
+  facebookUrl?: string;
+  instagramUrl?: string;
+  booksyUrl?: string;
   copywriteText?: string;
 }

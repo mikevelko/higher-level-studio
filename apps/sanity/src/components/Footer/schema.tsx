@@ -1,12 +1,8 @@
-import {
-  CommonGroup,
-  commonGroups,
-} from "@/contentSections/commonFields";
+import { CommonGroup, commonGroups } from "@/contentSections/commonFields";
 import { defineField } from "sanity";
 
 import customImage from "@/lib/schemas/customImage";
 import customLink from "@/lib/schemas/customLink";
-import customRichText from "@/lib/schemas/customRichText";
 
 export default {
   name: "footer",
@@ -27,17 +23,46 @@ export default {
       group: CommonGroup.Content,
     }),
     defineField({
-      name: "text",
-      type: customRichText.name,
+      type: "string",
+      name: "address",
       group: CommonGroup.Content,
     }),
     defineField({
-      name: "links",
+      type: "string",
+      name: "contactPhoneNumber1",
+      group: CommonGroup.Content,
+    }),
+    defineField({
+      type: "string",
+      name: "contactPhoneNumber2",
+      group: CommonGroup.Content,
+    }),
+    defineField({
+      type: "string",
+      name: "contactEmail",
+      group: CommonGroup.Content,
+    }),
+    defineField({
+      name: "facebookUrl",
+      type: "string",
+      group: CommonGroup.Content,
+    }),
+    defineField({
+      name: "instagramUrl",
+      type: "string",
+      group: CommonGroup.Content,
+    }),
+    defineField({
+      name: "booksyUrl",
+      type: "string",
+      group: CommonGroup.Content,
+    }),
+    defineField({
+      name: "servicesLinks",
       type: "array",
       of: [{ type: customLink.name }],
       group: CommonGroup.Content,
     }),
-
     defineField({
       name: "copywriteText",
       type: "string",
@@ -47,12 +72,10 @@ export default {
   preview: {
     select: {
       title: "title",
-      image: "image.image",
     },
-    prepare({ title, image }: any) {
+    prepare({ title }: any) {
       return {
         title,
-        media: image,
       };
     },
   },

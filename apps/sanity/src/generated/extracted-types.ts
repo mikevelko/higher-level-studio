@@ -479,13 +479,19 @@ export type Footer = {
   _rev: string;
   title?: string;
   image?: CustomImage;
-  text?: CustomRichText;
-  links?: Array<
+  copywriteText?: string;
+  address?: string;
+  contactPhoneNumber1?: string;
+  contactPhoneNumber2?: string;
+  contactEmail?: string;
+  facebookUrl?: string;
+  instagramUrl?: string;
+  booksyUrl?: string;
+  servicesLinks?: Array<
     {
       _key: string;
     } & CustomLink
   >;
-  copywriteText?: string;
 };
 
 export type CustomRichText = {

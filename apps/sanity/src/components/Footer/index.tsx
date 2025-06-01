@@ -4,7 +4,6 @@ import { Footer as FooterUI } from "@shared/ui";
 
 import { prepareImageProps } from "@/lib/adapters/prepareImageProps";
 import { prepareLinkProps } from "@/lib/adapters/prepareLinkProps";
-import { prepareRichTextProps } from "@/lib/adapters/prepareRichTextProps";
 import SectionContainer from "@/components/SectionContainer";
 
 import type { IFooterProps } from "./types";
@@ -12,9 +11,24 @@ import type { IFooterProps } from "./types";
 export default function Footer({ data }: IFooterProps) {
   if (!data) return null;
 
-  const { links, text, copywriteText, image } = data;
+  const {
+    copywriteText,
+    image,
+    address,
+    contactPhoneNumber1,
+    contactPhoneNumber2,
+    contactEmail,
+    facebookUrl,
+    instagramUrl,
+    booksyUrl,
+    servicesLinks,
+  } = data;
 
-  if ((!links || links.length === 0) && !image && !copywriteText && !text)
+  if (
+    (!servicesLinks || servicesLinks.length === 0) &&
+    !image &&
+    !copywriteText
+  )
     return <EmptyBlock name="Footer" />;
 
   return (
@@ -22,8 +36,14 @@ export default function Footer({ data }: IFooterProps) {
       <FooterUI
         image={prepareImageProps(image)}
         copywriteText={copywriteText}
-        links={links?.map(prepareLinkProps) || []}
-        text={prepareRichTextProps(text)}
+        servicesLinks={servicesLinks?.map(prepareLinkProps) || []}
+        address={address}
+        contactPhoneNumber1={contactPhoneNumber1}
+        contactPhoneNumber2={contactPhoneNumber2}
+        contactEmail={contactEmail}
+        facebookUrl={facebookUrl}
+        instagramUrl={instagramUrl}
+        booksyUrl={booksyUrl}
       />
     </SectionContainer>
   );
