@@ -51,7 +51,7 @@ export function Header({
         )}
         aria-label="main mavigation"
       >
-        <div className="h-28 border-2 border-blue-500">
+        <div className="h-28">
           {image && (
             <NextLink href="/">
               <Image {...image} fit="contain" />
