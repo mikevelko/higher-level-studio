@@ -45,7 +45,7 @@ export function HeaderMobile({ links, image, className }: IMobileHeaderProps) {
         className={cn("flex grow items-center justify-between ")}
         aria-label="main mavigation mobile"
       >
-        <div className="size-16">
+        <div className="h-16 w-24">
           {image && (
             <NextLink href="/">
               <Image {...image} fit="contain" />
