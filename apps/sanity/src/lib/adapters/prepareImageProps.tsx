@@ -40,8 +40,8 @@ export const prepareImageProps = (props?: CustomImage): IImageProps => {
     src: url,
     alt: props.image.alt,
     aspectRatio: stegaClean(props.aspectRatio) as ImageAspectRatio,
+    fit: "contain",
     fill: true,
-    fit: "cover",
     sizes: "(max-width: 1280px) 100vw, 1280px",
   };
 };

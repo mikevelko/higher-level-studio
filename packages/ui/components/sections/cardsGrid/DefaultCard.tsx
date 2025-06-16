@@ -21,7 +21,7 @@ export default function DefaultCard({
           "items-center": alignVariant === "center",
           "items-start": alignVariant === "left",
           "items-end": alignVariant === "right",
-          "rounded-2xl": rounded === "large",
+          "border-textColor rounded-2xl border": rounded === "large",
         },
       )}
     >
@@ -30,8 +30,8 @@ export default function DefaultCard({
           <Image {...image} />
         </div>
       )}
-      <div className="text-xl font-semibold">{title}</div>
-      <div className="text-textSecondaryColor text-base">{description}</div>
+      <div className="text-textColor text-xl font-semibold">{title}</div>
+      <div className="text-textColor text-base">{description}</div>
       <Link {...link} />
     </div>
   );

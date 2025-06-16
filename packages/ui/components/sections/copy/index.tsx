@@ -5,9 +5,12 @@ import type { ICopyProps } from "./types";
 export function Copy({ columns, isReversedOnMobile }: ICopyProps) {
   return (
     <div
-      className={cn("flex flex-col items-center gap-6 lg:flex-row", {
-        "flex-col-reverse": isReversedOnMobile,
-      })}
+      className={cn(
+        "flex flex-col items-center justify-center gap-6 lg:flex-row",
+        {
+          "flex-col-reverse": isReversedOnMobile,
+        },
+      )}
     >
       {columns.map((text, index) => (
         <div

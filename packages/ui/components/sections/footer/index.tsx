@@ -16,7 +16,6 @@ export function Footer({
   booksyUrl,
   copywriteText,
 }: IFooterProps) {
-  console.log(contactPhoneNumber1);
   return (
     <footer className="space-y-12">
       <div className="flex flex-col justify-center gap-12 md:flex-row md:gap-32">

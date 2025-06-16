@@ -36,7 +36,8 @@ export function Header({
       className={cn(
         "flex gap-2",
         className,
-        isScrolled ? "bg-bgColorTransparent" : "",
+        // replace second if want no bg color
+        isScrolled ? "bg-bgColorTransparent" : "bg-bgColorTransparent",
       )}
     >
       <nav
@@ -50,7 +51,7 @@ export function Header({
         )}
         aria-label="main mavigation"
       >
-        <div className="h-28">
+        <div className="h-28 border-2 border-blue-500">
           {image && (
             <NextLink href="/">
               <Image {...image} fit="contain" />
