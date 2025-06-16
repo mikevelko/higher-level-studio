@@ -10,23 +10,30 @@ import type { IHeroSectionProps } from "./types";
 export default function HeroSection({ data }: IHeroSectionProps) {
   if (!data) return null;
 
-  const { image, globalData } = data;
+  const { image, globalData, mobileImage } = data;
 
-  if (!image) return <EmptyBlock name="Hero Section" />;
+  if (!image || !mobileImage) return <EmptyBlock name="Hero Section" />;
 
   if (globalData) {
-    const { image: globalImage } = globalData as any;
+    const { image: globalImage, mobileImage: globalMobileImage } =
+      globalData as any;
 
     return (
       <SectionContainer sectionData={globalData as any}>
-        <Hero image={prepareImageProps(globalImage)} />
+        <Hero
+          image={prepareImageProps(globalImage)}
+          mobileImage={prepareImageProps(globalMobileImage)}
+        />
       </SectionContainer>
     );
   }
 
   return (
     <SectionContainer sectionData={data}>
-      <Hero image={prepareImageProps(image)} />
+      <Hero
+        image={prepareImageProps(image)}
+        mobileImage={prepareImageProps(mobileImage)}
+      />
     </SectionContainer>
   );
 }

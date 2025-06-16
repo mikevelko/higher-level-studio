@@ -86,6 +86,7 @@ export type SectionHero = {
   title: string;
   text?: CustomRichText;
   image?: CustomImage;
+  mobileImage?: CustomImage;
   links: Array<
     {
       _key: string;

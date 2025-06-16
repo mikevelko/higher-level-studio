@@ -10,7 +10,7 @@ export const buttonVariants = cva("leading-none inline text-center", {
       [ButtonVariant.Default]:
         "text-textColor font-medium hover:text-primaryColor",
       [ButtonVariant.Primary]:
-        "font-medium text-bgColor rounded-lg bg-primaryColor hover:text-textColor",
+        "font-medium text-textColor rounded-lg bg-primaryColor hover:text-textColor",
       [ButtonVariant.Secondary]:
         "font-medium text-textColor border border-textColor rounded-lg focus:ring-4 focus:ring-textSecondaryColor",
       [ButtonVariant.Badge]:

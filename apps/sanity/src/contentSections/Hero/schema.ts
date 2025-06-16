@@ -27,6 +27,11 @@ export default {
       name: "image",
       type: customImage.name,
     }),
+    defineField({
+      group: CommonGroup.Content,
+      name: "mobileImage",
+      type: customImage.name,
+    }),
     ...sectionCommonFields,
   ],
   preview: {

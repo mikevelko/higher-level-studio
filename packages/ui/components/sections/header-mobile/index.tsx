@@ -37,7 +37,7 @@ export function HeaderMobile({ links, image, className }: IMobileHeaderProps) {
     <header
       className={cn(
         "flex",
-        isScrolled ? "bg-bgColorTransparent" : "",
+        isScrolled ? "bg-bgColorTransparent" : "bg-bgColorTransparent",
         className,
       )}
     >
