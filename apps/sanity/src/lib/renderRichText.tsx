@@ -2,6 +2,7 @@ import CardsGrid from "@/contentSections/CardsGrid";
 import Carousel from "@/contentSections/Carousel";
 import LinksList from "@/contentSections/LinksList";
 import Logos from "@/contentSections/Logos";
+import Map from "@/contentSections/Map";
 import type { CustomImage } from "@/generated/extracted-types";
 import { PortableText } from "@portabletext/react";
 import { stegaClean } from "@sanity/client/stega";
@@ -53,6 +54,10 @@ const COMPONENTS = {
 
     "section.carousel": ({ value }: { value: any }) => {
       return <Carousel data={{ ...value, paddingX: "none" }} />;
+    },
+
+    "section.map": ({ value }: { value: any }) => {
+      return <Map data={{ ...value, paddingX: "none" }} />;
     },
   },
 

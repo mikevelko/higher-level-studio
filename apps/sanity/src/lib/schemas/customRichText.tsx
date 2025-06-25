@@ -66,6 +66,9 @@ const customRichText = defineType({
         {
           type: "section.linksList",
         },
+        {
+          type: "section.map",
+        },
       ],
       // components: componentsWithBlocksInput({
       //   presets: Object.values(sectionsPresets)

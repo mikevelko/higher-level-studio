@@ -7,6 +7,7 @@ import hero from "@/contentSections/Hero/schema";
 import linksList from "@/contentSections/LinksList/schema";
 import logos from "@/contentSections/Logos/schema";
 
+import map from '@/contentSections/Map/schema'
 // end of section imports
 
 const sections = [
@@ -18,7 +19,8 @@ const sections = [
   blog,
   carousel,
   hero,
-  // end of section array
+  map,
+// end of section array
 ];
 
 export default sections;
