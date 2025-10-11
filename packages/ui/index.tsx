@@ -15,7 +15,8 @@ export * from "./components/ui/GenericCarousel";
 export * from "./components/ui/image";
 export * from "./components/ui/link";
 export * from "./components/ui/richText";
-export * from "./components/sections/map"
+export * from "./components/sections/map";
+export * from "./components/sections/contactForm";
 // end component exports
 
 export { cn } from "./utils";

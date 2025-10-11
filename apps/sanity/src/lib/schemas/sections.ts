@@ -2,12 +2,13 @@
 import blog from "@/contentSections/Blog/schema";
 import cardsGrid from "@/contentSections/CardsGrid/schema";
 import carousel from "@/contentSections/Carousel/schema";
+import contactForm from "@/contentSections/ContactForm/schema";
 import copy from "@/contentSections/Copy/schema";
 import hero from "@/contentSections/Hero/schema";
 import linksList from "@/contentSections/LinksList/schema";
 import logos from "@/contentSections/Logos/schema";
+import map from "@/contentSections/Map/schema";
 
-import map from '@/contentSections/Map/schema'
 // end of section imports
 
 const sections = [
@@ -20,7 +21,8 @@ const sections = [
   carousel,
   hero,
   map,
-// end of section array
+  contactForm,
+  // end of section array
 ];
 
 export default sections;

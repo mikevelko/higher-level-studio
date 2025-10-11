@@ -128,6 +128,20 @@ export type SectionMap = {
   maxWidth: "none" | "base" | "small";
 };
 
+export type SectionContactForm = {
+  _id: string;
+  _type: "section.contactForm";
+  _createdAt: string;
+  _updatedAt: string;
+  _rev: string;
+  theme?: "light" | "dark" | "light-gray" | "dark-gray";
+  marginTop: "none" | "base" | "large";
+  paddingX: "none" | "base" | "large";
+  paddingY: "none" | "base" | "large";
+  marginBottom: "none" | "base" | "large";
+  maxWidth: "none" | "base" | "small";
+};
+
 export type SectionCarousel = {
   _type: "section.carousel";
   slidesPerView: number;

@@ -1,4 +1,5 @@
 import { cardsGridsTemplates } from "./CardsGrid/templates";
+import { contactFormTemplates } from "./ContactForm/templates";
 import { copyTemplates } from "./Copy/templates";
 import { heroTemplates } from "./Hero/templates";
 import { linksListTemplates } from "./LinksList/templates";
@@ -12,4 +13,5 @@ export const sectionsPresets = {
   linksList: linksListTemplates,
   hero: heroTemplates,
   map: mapTemplates,
+  contactForm: contactFormTemplates,
 };

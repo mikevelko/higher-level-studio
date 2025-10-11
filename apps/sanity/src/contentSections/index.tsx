@@ -2,12 +2,13 @@
 import Blog from "./Blog";
 import CardsGrid from "./CardsGrid";
 import Carousel from "./Carousel";
+import ContactForm from "./ContactForm";
 import Copy from "./Copy";
 import Hero from "./Hero";
 import LinksList from "./LinksList";
 import Logos from "./Logos";
+import Map from "./Map";
 
-import Map from './Map'
 // end of section imports
 
 export const sections: Record<string, any> = {
@@ -19,8 +20,9 @@ export const sections: Record<string, any> = {
   "section.blog": Blog,
   "section.carousel": Carousel,
   "section.hero": Hero,
-  'section.map': Map,
-// end of section object
+  "section.map": Map,
+  "section.contactForm": ContactForm,
+  // end of section object
 };
 
 export function SectionRenderer(props: { section: any }) {

@@ -1,5 +1,6 @@
 import CardsGrid from "@/contentSections/CardsGrid";
 import Carousel from "@/contentSections/Carousel";
+import ContactForm from "@/contentSections/ContactForm";
 import LinksList from "@/contentSections/LinksList";
 import Logos from "@/contentSections/Logos";
 import Map from "@/contentSections/Map";
@@ -58,6 +59,10 @@ const COMPONENTS = {
 
     "section.map": ({ value }: { value: any }) => {
       return <Map data={{ ...value, paddingX: "none" }} />;
+    },
+
+    "section.contactForm": ({ value }: { value: any }) => {
+      return <ContactForm data={{ ...value, paddingX: "none" }} />;
     },
   },
 

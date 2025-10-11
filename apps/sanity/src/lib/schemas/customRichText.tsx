@@ -69,6 +69,9 @@ const customRichText = defineType({
         {
           type: "section.map",
         },
+        {
+          type: "section.contactForm",
+        },
       ],
       // components: componentsWithBlocksInput({
       //   presets: Object.values(sectionsPresets)
