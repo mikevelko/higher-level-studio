@@ -6,7 +6,7 @@ export function Copy({ columns, isReversedOnMobile }: ICopyProps) {
   return (
     <div
       className={cn(
-        "flex flex-col items-center justify-center gap-6 lg:flex-row",
+        "flex flex-col items-start justify-center gap-12 lg:flex-row",
         {
           "flex-col-reverse": isReversedOnMobile,
         },

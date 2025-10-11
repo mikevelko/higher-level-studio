@@ -64,7 +64,7 @@ export function ContactForm() {
   };
 
   return (
-    <Form.Root className="w-full px-2" onSubmit={handleSubmit}>
+    <Form.Root className="w-full" onSubmit={handleSubmit}>
       <div className="flex w-full flex-col gap-8">
         <div className="flex w-full gap-8">
           <Form.Field name="name" className="w-full">
