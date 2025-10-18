@@ -64,7 +64,7 @@ export function Map({
 
   return (
     <div className="bg-white dark:bg-gray-900">
-      <div ref={mapRef} className="h-96 w-full rounded-lg shadow-md"></div>
+      <div ref={mapRef} className="z-10 h-96 w-full rounded-lg shadow-md"></div>
     </div>
   );
 }

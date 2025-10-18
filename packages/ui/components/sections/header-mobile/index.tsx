@@ -71,7 +71,12 @@ export function HeaderMobile({ links, image, className }: IMobileHeaderProps) {
               </Button>
               <div className="flex flex-col items-center p-4 pt-20">
                 {links.map((link, i) => (
-                  <Link key={i} {...link} className="mt-8" />
+                  <Link
+                    key={i}
+                    {...link}
+                    onClick={toggleMenu}
+                    className="mt-8"
+                  />
                 ))}
               </div>
             </div>
