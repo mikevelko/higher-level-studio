@@ -12,12 +12,10 @@
 
 .light {
   --bg: #35183f;
-  --bg-transparent: #35183fda;
+  --bg-secondary: #25144b;
   --text: #e5e7e7;
   --text-secondary: #666666;
   --primary: #0a6f4f;
-  --gradient-start: #25144bdd;
-  --gradient-end: #203f38dd;   /* keep as is */
 }
 
 .dark {
@@ -42,19 +40,17 @@
 }
 
 .deep-violet {
-  --bg: #1A1138;
+  --bg: #25144b;
 }
 
-.mid-violet {
-  --bg: #2B1851;
-}
-
-@layer utilities {
-  .gradient-header {
-    background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
-  }
-  
+@layer utilities {  
   .gradient-footer {
-    background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+    background: linear-gradient(180deg, var(--bg), var(--bg-secondary));
+  }
+
+  .no-scroll {
+    overflow: hidden !important;
+    position: fixed !important;
+    width: 100% !important;
   }
 }

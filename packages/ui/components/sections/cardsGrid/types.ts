@@ -14,8 +14,7 @@ export interface IDefaultCardProps {
     | "dark"
     | "light-gray"
     | "dark-gray"
-    | "deep-violet"
-    | "mid-violet";
+    | "deep-violet";
 }
 
 export interface ICardsGridProps {

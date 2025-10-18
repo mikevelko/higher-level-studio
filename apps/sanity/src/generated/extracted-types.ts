@@ -401,8 +401,7 @@ export type DefaultCard = {
     | "dark-gray"
     | "dark"
     | "none"
-    | "deep-violet"
-    | "mid-violet";
+    | "deep-violet";
   rounded: "large" | "none";
 };
 

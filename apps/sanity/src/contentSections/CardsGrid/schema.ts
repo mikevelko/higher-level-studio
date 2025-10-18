@@ -65,7 +65,6 @@ export const defaultCard = defineType({
           { title: "dark", value: "dark" },
           { title: "none", value: "none" },
           { title: "deep-violet", value: "deep-violet" },
-          { title: "mid-violet", value: "mid-violet" },
         ],
         layout: "dropdown",
       },

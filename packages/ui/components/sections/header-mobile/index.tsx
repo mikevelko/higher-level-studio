@@ -13,34 +13,41 @@ import type { IMobileHeaderProps } from "./types";
 export function HeaderMobile({ links, image, className }: IMobileHeaderProps) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const [isScrolled, setIsScrolled] = useState(false);
+  // const [isScrolled, setIsScrolled] = useState(false);
+
+  // useEffect(() => {
+  //   const checkScrollPosition = () => {
+  //     setIsScrolled(window.scrollY > 50); // Adjust the value as needed
+  //   };
+
+  //   // Check scroll position on initial render
+  //   checkScrollPosition();
+
+  //   window.addEventListener("scroll", checkScrollPosition);
+  //   return () => {
+  //     window.removeEventListener("scroll", checkScrollPosition);
+  //   };
+  // }, []);
 
   useEffect(() => {
-    const checkScrollPosition = () => {
-      setIsScrolled(window.scrollY > 50); // Adjust the value as needed
-    };
+    if (isMenuOpen) {
+      document.body.classList.add("no-scroll");
+    } else {
+      document.body.classList.remove("no-scroll");
+    }
 
-    // Check scroll position on initial render
-    checkScrollPosition();
-
-    window.addEventListener("scroll", checkScrollPosition);
+    // Cleanup on unmount
     return () => {
-      window.removeEventListener("scroll", checkScrollPosition);
+      document.body.classList.remove("no-scroll");
     };
-  }, []);
+  }, [isMenuOpen]);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
   return (
-    <header
-      className={cn(
-        "flex",
-        isScrolled ? "bg-bgColorTransparent" : "bg-bgColorTransparent",
-        className,
-      )}
-    >
+    <header className={cn("flex", "bg-bgColorSecondary opacity-95", className)}>
       <nav
         className={cn("flex grow items-center justify-between ")}
         aria-label="main mavigation mobile"
@@ -61,11 +68,11 @@ export function HeaderMobile({ links, image, className }: IMobileHeaderProps) {
         {isMenuOpen && (
           <>
             <div
-              className="fixed inset-0 z-40 bg-white opacity-95"
+              className="fixed inset-0 z-40 bg-white"
               style={{ width: "calc(100% - 13rem)" }}
               onClick={toggleMenu}
             ></div>
-            <div className="bg-bgColor fixed right-0 top-0 z-50 h-full w-52">
+            <div className="bg-bgColorSecondary fixed right-0 top-0 z-50 h-full w-52">
               <Button className="absolute right-4 top-8" onClick={toggleMenu}>
                 <Cross1Icon className="size-5" />
               </Button>

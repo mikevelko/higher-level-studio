@@ -11,7 +11,7 @@ export default function SingleLinkSection({ data }: ISingleLinkProps) {
     <SectionContainer sectionData={data}>
       <a
         href={href}
-        className="text-primaryColor font-bold no-underline"
+        className="text-primaryColor no-underline"
         target="_blank"
         rel="noopener noreferrer"
       >

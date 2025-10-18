@@ -27,12 +27,12 @@ export default function Header({ data }: IHeaderProps) {
         links={links?.map(prepareLinkProps) || []}
         image={prepareImageProps(image)}
         alignVariant={stegaClean(alignVariant) as AlignVariant}
-        className="hidden md:block"
+        className="hidden lg:block"
       />
       <HeaderMobileUI
         links={links?.map(prepareLinkProps) || []}
         image={prepareImageProps(image)}
-        className="block md:hidden"
+        className="block lg:hidden"
       />
     </SectionContainer>
   );
