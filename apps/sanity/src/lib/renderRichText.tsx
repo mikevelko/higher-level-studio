@@ -4,6 +4,7 @@ import ContactForm from "@/contentSections/ContactForm";
 import LinksList from "@/contentSections/LinksList";
 import Logos from "@/contentSections/Logos";
 import Map from "@/contentSections/Map";
+import SingleLink from "@/contentSections/SingleLink";
 import type { CustomImage } from "@/generated/extracted-types";
 import { PortableText } from "@portabletext/react";
 import { stegaClean } from "@sanity/client/stega";
@@ -59,6 +60,10 @@ const COMPONENTS = {
 
     "section.map": ({ value }: { value: any }) => {
       return <Map data={{ ...value, paddingX: "none" }} />;
+    },
+
+    "section.singleLink": ({ value }: { value: any }) => {
+      return <SingleLink data={{ ...value, paddingX: "none" }} />;
     },
 
     "section.contactForm": ({ value }: { value: any }) => {

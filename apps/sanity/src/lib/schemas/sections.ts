@@ -8,6 +8,7 @@ import hero from "@/contentSections/Hero/schema";
 import linksList from "@/contentSections/LinksList/schema";
 import logos from "@/contentSections/Logos/schema";
 import map from "@/contentSections/Map/schema";
+import singleLink from "@/contentSections/SingleLink/schema";
 
 // end of section imports
 
@@ -22,6 +23,7 @@ const sections = [
   hero,
   map,
   contactForm,
+  singleLink,
   // end of section array
 ];
 

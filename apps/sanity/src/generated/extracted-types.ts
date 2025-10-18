@@ -122,6 +122,23 @@ export type SectionMap = {
   zoom: number;
   showTooltip: boolean;
   tooltipText: string;
+  tooltipPermanent: boolean;
+  theme?: "light" | "dark" | "light-gray" | "dark-gray";
+  marginTop: "none" | "base" | "large";
+  paddingX: "none" | "base" | "large";
+  paddingY: "none" | "base" | "large";
+  marginBottom: "none" | "base" | "large";
+  maxWidth: "none" | "base" | "small";
+};
+
+export type SectionSingleLink = {
+  _id: string;
+  _type: "section.singleLink";
+  _createdAt: string;
+  _updatedAt: string;
+  _rev: string;
+  href: string;
+  text: string;
   theme?: "light" | "dark" | "light-gray" | "dark-gray";
   marginTop: "none" | "base" | "large";
   paddingX: "none" | "base" | "large";

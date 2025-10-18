@@ -72,6 +72,9 @@ const customRichText = defineType({
         {
           type: "section.contactForm",
         },
+        {
+          type: "section.singleLink",
+        },
       ],
       // components: componentsWithBlocksInput({
       //   presets: Object.values(sectionsPresets)
