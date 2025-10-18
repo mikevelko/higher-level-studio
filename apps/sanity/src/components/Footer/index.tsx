@@ -32,7 +32,7 @@ export default function Footer({ data }: IFooterProps) {
     return <EmptyBlock name="Footer" />;
 
   return (
-    <SectionContainer sectionData={data}>
+    <SectionContainer sectionData={data} className="gradient-footer">
       <FooterUI
         image={prepareImageProps(image)}
         copywriteText={copywriteText}

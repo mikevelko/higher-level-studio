@@ -16,6 +16,8 @@
   --text: #e5e7e7;
   --text-secondary: #666666;
   --primary: #0a6f4f;
+  --gradient-start: #25144bdd;
+  --gradient-end: #203f38dd;   /* keep as is */
 }
 
 .dark {
@@ -37,4 +39,22 @@
   --text: #f6f6f6;
   --text-secondary: #bababa;
   --primary: #4f46e5;
+}
+
+.deep-violet {
+  --bg: #1A1138;
+}
+
+.mid-violet {
+  --bg: #2B1851;
+}
+
+@layer utilities {
+  .gradient-header {
+    background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+  }
+  
+  .gradient-footer {
+    background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+  }
 }

@@ -1,6 +1,3 @@
-"use client";
-
-import { useEffect, useState } from "react";
 import NextLink from "next/link";
 
 import { cn } from "../../../utils";
@@ -15,29 +12,30 @@ export function Header({
   image,
   alignVariant,
 }: IHeaderProps) {
-  const [isScrolled, setIsScrolled] = useState(false);
+  // const [isScrolled, setIsScrolled] = useState(false);
 
-  useEffect(() => {
-    const checkScrollPosition = () => {
-      setIsScrolled(window.scrollY > 50); // Adjust the value as needed
-    };
+  // useEffect(() => {
+  //   const checkScrollPosition = () => {
+  //     setIsScrolled(window.scrollY > 50); // Adjust the value as needed
+  //   };
 
-    // Check scroll position on initial render
-    checkScrollPosition();
+  //   // Check scroll position on initial render
+  //   checkScrollPosition();
 
-    window.addEventListener("scroll", checkScrollPosition);
-    return () => {
-      window.removeEventListener("scroll", checkScrollPosition);
-    };
-  }, []);
+  //   window.addEventListener("scroll", checkScrollPosition);
+  //   return () => {
+  //     window.removeEventListener("scroll", checkScrollPosition);
+  //   };
+  // }, []);
 
   return (
     <header
       className={cn(
         "flex gap-2",
         className,
+        "gradient-header",
         // replace second if want no bg color
-        isScrolled ? "bg-bgColorTransparent" : "bg-bgColorTransparent",
+        // isScrolled ? "bg-bgColorTransparent" : "bg-bgColorTransparent",
       )}
     >
       <nav

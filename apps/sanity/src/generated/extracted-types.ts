@@ -395,7 +395,14 @@ export type DefaultCard = {
   description?: string;
   link?: CustomLink;
   alignVariant: "left" | "center" | "right";
-  backgroundColor: "light" | "light-gray" | "dark-gray" | "dark" | "none";
+  backgroundColor:
+    | "light"
+    | "light-gray"
+    | "dark-gray"
+    | "dark"
+    | "none"
+    | "deep-violet"
+    | "mid-violet";
   rounded: "large" | "none";
 };
 

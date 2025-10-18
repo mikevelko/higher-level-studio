@@ -8,7 +8,14 @@ export interface IDefaultCardProps {
   link: LinkProps;
   alignVariant: "left" | "center" | "right";
   rounded: "none" | "large";
-  backgroundColor: "none" | "light" | "dark" | "light-gray" | "dark-gray";
+  backgroundColor:
+    | "none"
+    | "light"
+    | "dark"
+    | "light-gray"
+    | "dark-gray"
+    | "deep-violet"
+    | "mid-violet";
 }
 
 export interface ICardsGridProps {
