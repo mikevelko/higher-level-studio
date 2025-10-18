@@ -30,6 +30,21 @@ export default {
       description:
         "5-8: Country/region level, 10-12: City level, 13-15: Neighborhood/street level ← This is where 13 falls, 16-18: Building/address level, 19+: Very detailed street view",
     }),
+    defineField({
+      group: CommonGroup.Content,
+      name: "showTooltip",
+      type: "boolean",
+    }),
+    defineField({
+      group: CommonGroup.Content,
+      name: "tooltipText",
+      type: "string",
+    }),
+    defineField({
+      group: CommonGroup.Content,
+      name: "tooltipPermanent",
+      type: "boolean",
+    }),
     ...sectionCommonFields,
   ],
   preview: {

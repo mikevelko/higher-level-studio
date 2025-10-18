@@ -6,6 +6,9 @@
     "longitude": 21.0731905,
     "latitude": 52.2848923,
     "zoom": 11,
+    "showTooltip": true,
+    "tooltipText": "Your description here",
+    "tooltipPermanent": false,
     "theme": "light",
     "paddingX": "base",
     "paddingY": "base"

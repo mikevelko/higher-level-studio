@@ -4,7 +4,16 @@ import { useEffect, useRef } from "react";
 
 import { type IMapsProps } from "./types";
 
-export function Map({ longitude, latitude, zoom }: IMapsProps) {
+import "./styles.css";
+
+export function Map({
+  longitude,
+  latitude,
+  zoom,
+  showTooltip,
+  tooltipText,
+  tooltipPermanent,
+}: IMapsProps) {
   const mapRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -25,15 +34,27 @@ export function Map({ longitude, latitude, zoom }: IMapsProps) {
         // @ts-ignore - Leaflet is loaded globally
         const L = window.L;
 
-        console.log(latitude, longitude, zoom);
-
         const map = L.map(mapRef.current!).setView([latitude, longitude], zoom);
 
         L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
           attribution: "© OpenStreetMap contributors",
         }).addTo(map);
 
-        L.marker([latitude, longitude]).addTo(map);
+        const marker = L.marker([latitude, longitude]).addTo(map);
+        if (showTooltip) {
+          marker.bindTooltip(
+            `
+            <div style="padding: 8px; font-size: 14px;">
+              <strong>Higher Level Studio</strong><br>
+              <span style="color: #666;">${tooltipText}</span>
+            </div>
+          `,
+            {
+              permanent: tooltipPermanent,
+              direction: "auto",
+            },
+          );
+        }
       };
       document.head.appendChild(script);
     };

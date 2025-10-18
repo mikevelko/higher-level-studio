@@ -120,6 +120,8 @@ export type SectionMap = {
   longitude: number;
   latitude: number;
   zoom: number;
+  showTooltip: boolean;
+  tooltipText: string;
   theme?: "light" | "dark" | "light-gray" | "dark-gray";
   marginTop: "none" | "base" | "large";
   paddingX: "none" | "base" | "large";

@@ -7,11 +7,25 @@ import type { IMapProps } from "./types";
 export default function MapSection({ data }: IMapProps) {
   if (!data) return null;
 
-  const { longitude, latitude, zoom } = data;
+  const {
+    longitude,
+    latitude,
+    zoom,
+    showTooltip,
+    tooltipText,
+    tooltipPermanent,
+  } = data;
 
   return (
     <SectionContainer sectionData={data}>
-      <Map longitude={longitude} latitude={latitude} zoom={zoom} />
+      <Map
+        longitude={longitude}
+        latitude={latitude}
+        zoom={zoom}
+        showTooltip={showTooltip}
+        tooltipText={tooltipText}
+        tooltipPermanent={tooltipPermanent}
+      />
     </SectionContainer>
   );
 }
