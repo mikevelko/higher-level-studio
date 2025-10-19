@@ -29,18 +29,18 @@ export function HeaderMobile({ links, image, className }: IMobileHeaderProps) {
   //   };
   // }, []);
 
-  // useEffect(() => {
-  //   if (isMenuOpen) {
-  //     document.body.classList.add("no-scroll");
-  //   } else {
-  //     document.body.classList.remove("no-scroll");
-  //   }
+  useEffect(() => {
+    if (isMenuOpen) {
+      document.body.classList.add("no-scroll");
+    } else {
+      document.body.classList.remove("no-scroll");
+    }
 
-  //   // Cleanup on unmount
-  //   return () => {
-  //     document.body.classList.remove("no-scroll");
-  //   };
-  // }, [isMenuOpen]);
+    // Cleanup on unmount
+    return () => {
+      document.body.classList.remove("no-scroll");
+    };
+  }, [isMenuOpen]);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
