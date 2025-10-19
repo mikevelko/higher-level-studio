@@ -11,6 +11,7 @@ export function Link({
   className,
   style,
   clickDisabled,
+  onClick,
   ...props
 }: LinkProps) {
   const { className: clickClassName, ...clickParams } =
@@ -24,6 +25,7 @@ export function Link({
       className={cn(className, clickClassName)}
       {...clickParams}
       {...props}
+      onClick={onClick}
     >
       <NextLink href={href}>{children || text}</NextLink>
     </Button>

@@ -7,4 +7,5 @@ export interface LinkProps extends ButtonVariantProps {
   className?: string;
   style?: React.CSSProperties;
   clickDisabled?: boolean;
+  onClick?: () => void;
 }
