@@ -47,4 +47,10 @@
   .gradient-footer {
     background: linear-gradient(180deg, var(--bg), var(--bg-secondary));
   }
+
+  .no-scroll {
+    overflow: hidden !important;
+    position: fixed !important;
+    width: 100% !important;
+  }
 }
