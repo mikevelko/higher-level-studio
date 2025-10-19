@@ -11,10 +11,10 @@
 }
 
 .light {
-  --bg: #35183f;
-  --bg-secondary: #25144b;
+  --bg: #2C2C2C;
+  --bg-secondary: #35183f;
   --text: #e5e7e7;
-  --text-secondary: #666666;
+  --text-secondary: #707070;
   --primary: #0a6f4f;
 }
 
@@ -40,7 +40,7 @@
 }
 
 .deep-violet {
-  --bg: #25144b;
+  --bg: #35183f;
 }
 
 @layer utilities {  
