@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import NextLink from "next/link";
 import { Cross1Icon, HamburgerMenuIcon } from "@radix-ui/react-icons";
 
@@ -17,18 +17,18 @@ export function HeaderMobile({ links, image, className }: IMobileHeaderProps) {
     setIsMenuOpen(!isMenuOpen);
   };
 
-  useEffect(() => {
-    if (isMenuOpen) {
-      document.body.classList.add("no-scroll");
-    } else {
-      document.body.classList.remove("no-scroll");
-    }
+  // useEffect(() => {
+  //   if (isMenuOpen) {
+  //     document.body.classList.add("no-scroll");
+  //   } else {
+  //     document.body.classList.remove("no-scroll");
+  //   }
 
-    // Cleanup on unmount
-    return () => {
-      document.body.classList.remove("no-scroll");
-    };
-  }, [isMenuOpen]);
+  //   // Cleanup on unmount
+  //   return () => {
+  //     document.body.classList.remove("no-scroll");
+  //   };
+  // }, [isMenuOpen]);
 
   return (
     <header
