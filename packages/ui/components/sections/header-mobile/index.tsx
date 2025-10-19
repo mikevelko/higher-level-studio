@@ -1,8 +1,9 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import NextLink from "next/link";
 import { Cross1Icon, HamburgerMenuIcon } from "@radix-ui/react-icons";
+import { createPortal } from "react-dom";
 
 import { cn } from "../../../utils";
 import { Button } from "../../ui/button";
@@ -17,18 +18,18 @@ export function HeaderMobile({ links, image, className }: IMobileHeaderProps) {
     setIsMenuOpen(!isMenuOpen);
   };
 
-  // useEffect(() => {
-  //   if (isMenuOpen) {
-  //     document.body.classList.add("no-scroll");
-  //   } else {
-  //     document.body.classList.remove("no-scroll");
-  //   }
+  useEffect(() => {
+    if (isMenuOpen) {
+      document.body.classList.add("no-scroll");
+    } else {
+      document.body.classList.remove("no-scroll");
+    }
 
-  //   // Cleanup on unmount
-  //   return () => {
-  //     document.body.classList.remove("no-scroll");
-  //   };
-  // }, [isMenuOpen]);
+    // Cleanup on unmount
+    return () => {
+      document.body.classList.remove("no-scroll");
+    };
+  }, [isMenuOpen]);
 
   return (
     <header
@@ -51,25 +52,34 @@ export function HeaderMobile({ links, image, className }: IMobileHeaderProps) {
           </Button>
         )}
 
-        {isMenuOpen && (
-          <>
-            <div
-              className="fixed inset-0 z-40 bg-white"
-              style={{ width: "calc(100% - 13rem)" }}
-              onClick={toggleMenu}
-            ></div>
-            <div className="bg-bgColorSecondary fixed right-0 top-0 z-50 h-full w-52">
-              <Button className="absolute right-4 top-8" onClick={toggleMenu}>
-                <Cross1Icon className="size-5" />
-              </Button>
-              <div className="flex flex-col items-center p-4 pt-20">
-                {links.map((link, i) => (
-                  <Link key={i} {...link} className="mt-8" />
-                ))}
+        {isMenuOpen &&
+          createPortal(
+            <div className="fixed inset-0 z-[9999] flex">
+              {/* Left white overlay */}
+              <div
+                className="flex-1 bg-white opacity-95"
+                onClick={toggleMenu}
+              ></div>
+
+              {/* Right menu panel */}
+              <div className="bg-bgColorSecondary relative h-full w-52">
+                <Button className="absolute right-4 top-8" onClick={toggleMenu}>
+                  <Cross1Icon className="size-5" />
+                </Button>
+                <div className="flex flex-col items-center p-4 pt-20">
+                  {links.map((link, i) => (
+                    <Link
+                      key={i}
+                      {...link}
+                      onClick={toggleMenu}
+                      className="mt-8"
+                    />
+                  ))}
+                </div>
               </div>
-            </div>
-          </>
-        )}
+            </div>,
+            document.body,
+          )}
       </nav>
     </header>
   );

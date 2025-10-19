@@ -10,6 +10,15 @@
   --section-padding-large: 72px;
 }
 
+/* fallback theme for createPortal */
+:root {
+  --bg: #2C2C2C;
+  --bg-secondary: #35183f;
+  --text: #e5e7e7;
+  --text-secondary: #707070;
+  --primary: #0a6f4f;
+}
+
 .light {
   --bg: #2C2C2C;
   --bg-secondary: #35183f;
