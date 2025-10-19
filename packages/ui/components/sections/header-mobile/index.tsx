@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import NextLink from "next/link";
 import { Cross1Icon, HamburgerMenuIcon } from "@radix-ui/react-icons";
 
@@ -13,41 +13,12 @@ import type { IMobileHeaderProps } from "./types";
 export function HeaderMobile({ links, image, className }: IMobileHeaderProps) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  // const [isScrolled, setIsScrolled] = useState(false);
-
-  // useEffect(() => {
-  //   const checkScrollPosition = () => {
-  //     setIsScrolled(window.scrollY > 50); // Adjust the value as needed
-  //   };
-
-  //   // Check scroll position on initial render
-  //   checkScrollPosition();
-
-  //   window.addEventListener("scroll", checkScrollPosition);
-  //   return () => {
-  //     window.removeEventListener("scroll", checkScrollPosition);
-  //   };
-  // }, []);
-
-  // useEffect(() => {
-  //   if (isMenuOpen) {
-  //     document.body.classList.add("no-scroll");
-  //   } else {
-  //     document.body.classList.remove("no-scroll");
-  //   }
-
-  //   // Cleanup on unmount
-  //   return () => {
-  //     document.body.classList.remove("no-scroll");
-  //   };
-  // }, [isMenuOpen]);
-
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
   return (
-    <header className={cn("flex", "bg-bgColorSecondary opacity-95", className)}>
+    <header className={cn("flex", "bg-bgColorSecondary", className)}>
       <nav
         className={cn("flex grow items-center justify-between ")}
         aria-label="main mavigation mobile"
@@ -78,12 +49,7 @@ export function HeaderMobile({ links, image, className }: IMobileHeaderProps) {
               </Button>
               <div className="flex flex-col items-center p-4 pt-20">
                 {links.map((link, i) => (
-                  <Link
-                    key={i}
-                    {...link}
-                    onClick={toggleMenu}
-                    className="mt-8"
-                  />
+                  <Link key={i} {...link} className="mt-8" />
                 ))}
               </div>
             </div>
