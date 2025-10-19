@@ -31,7 +31,9 @@ export function HeaderMobile({ links, image, className }: IMobileHeaderProps) {
   }, [isMenuOpen]);
 
   return (
-    <header className={cn("flex", "bg-bgColorSecondary", className)}>
+    <header
+      className={cn("flex", "bg-bgColorSecondary", "opacity-95", className)}
+    >
       <nav
         className={cn("flex grow items-center justify-between ")}
         aria-label="main mavigation mobile"
