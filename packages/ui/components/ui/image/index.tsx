@@ -31,6 +31,7 @@ export function Image({ aspectRatio, fit, ...props }: IImageProps) {
           marginBottom: 0,
           objectFit: fit,
         }}
+        unoptimized={true}
         {...props}
       />
     </ImageContainer>
