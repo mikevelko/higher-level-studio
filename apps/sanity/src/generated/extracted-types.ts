@@ -700,6 +700,7 @@ export type CustomImage = {
     | "1/2"
     | "4/1"
     | "3/1"
+    | "5/2"
     | "auto";
 };
 
