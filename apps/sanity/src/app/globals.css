@@ -12,44 +12,32 @@
 
 /* fallback theme for createPortal */
 :root {
-  --bg: #2C2C2C;
-  --bg-secondary: #35183f;
-  --text: #e5e7e7;
-  --text-secondary: #707070;
-  --primary: #0a6f4f;
+  --bg: #1E1E1E;
+  --bg-secondary: #2A2F33;
+  --text: #E8EAEA;
+  --text-secondary: #7A7D80;
+  --primary: #00A896; /* vibrant teal */
 }
 
 .light {
-  --bg: #2C2C2C;
-  --bg-secondary: #35183f;
-  --text: #e5e7e7;
-  --text-secondary: #707070;
-  --primary: #0a6f4f;
+  --bg: #1E1E1E;
+  --bg-secondary: #2A2F33;
+  --text: #E8EAEA;
+  --text-secondary: #7A7D80;
+  --primary: #00A896; /* vibrant teal */
 }
 
 .dark {
-  --bg: #222222;
-  --text: #f6f6f6;
-  --text-secondary: #999999;
-  --primary: #4f46e5;
-}
-
-.light-gray {
-  --bg: #f6f6f6;
-  --text: #222222;
-  --text-secondary: #666666;
-  --primary: #4f46e5;
-}
-
-.dark-gray {
-  --bg: #5b5b5b;
+  --bg: #373F51;
   --text: #f6f6f6;
   --text-secondary: #bababa;
   --primary: #4f46e5;
 }
 
-.deep-violet {
-  --bg: #35183f;
+.light-gray {
+}
+
+.dark-gray {
 }
 
 @layer utilities {  
